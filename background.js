@@ -4,7 +4,9 @@ chrome.tabs.onUpdated.addListener(() => {
 
         tabs.forEach(tab => {
             if (tab.id !== activeTabId) {
-                chrome.tabs.remove(tab.id);
+                chrome.tabs.remove(tab.id).catch(error => {
+                    console.log(`Error removing tab ${tab.id}: ${error}`);
+                });
             }
         });
     });
