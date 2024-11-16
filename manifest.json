@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Close Other Tabs",
+    "version": "1.0",
+    "description": "Closes all tabs except the current one.",
+    "permissions": [
+        "tabs",
+        "activeTab"
+    ],
+    "action": {
+        "default_title": "Close Other Tabs"
+    },
+    "background": {
+        "service_worker": "background.js"
+    }
+}
